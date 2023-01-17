@@ -23,7 +23,6 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 let invader_x = 0
-let i_ = 0
 let j_ = 0
 let agent_x = 0
 let point = 0
@@ -43,11 +42,10 @@ loops.everyInterval(2000, function () {
     }
     for (let i = 0; i <= 4; i++) {
         for (let j = 0; j <= 2; j++) {
-            i_ = i * -1
             j_ = j * -1
-            if (led.point(i_ + 4, j_ + 2)) {
-                led.unplot(i_ + 4, j_ + 2)
-                led.plotBrightness(i_ + 4, j_ + 3, 50)
+            if (led.point(i, j_ + 2)) {
+                led.unplot(i, j_ + 2)
+                led.plotBrightness(i, j_ + 3, 50)
             }
         }
     }
